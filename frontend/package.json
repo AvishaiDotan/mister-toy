@@ -1,17 +1,19 @@
 {
-  "name": "mister-toy",
+  "name": "vue-advanced-samples",
   "version": "0.0.0",
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --port 5050"
   },
   "dependencies": {
-    "vue": "^3.2.41",
-    "vue-router": "^4.1.5"
+    "vue": "^3.2.31",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.1.2",
-    "vite": "^3.1.8"
+    "@vitejs/plugin-vue": "^2.2.2",
+    "jsdom": "^19.0.0",
+    "vite": "^2.8.4"
   }
 }
