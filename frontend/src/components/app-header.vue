@@ -1,12 +1,11 @@
 <template>
-  <header class="main-header flex items-center justify-between">
-    <div class="logo uppercase">
-      <h2 v-rainbow>Cars</h2>
+  <header class="main-header">
+    <div>
+      <h1 v-rainbow>Bali Express</h1>
     </div>
-    <nav class="flex gap-1">
+    <nav>
       <router-link class="link" to="/">Home</router-link>
-      <router-link class="link" to="/car">Car</router-link>
-      <router-link class="link" to="/about">About</router-link>
+      <router-link class="link" to="/car">Shop</router-link>
     </nav>
   </header>
 </template>

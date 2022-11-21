@@ -1,0 +1,10 @@
+.main-header {
+    background-color: var(--clr1);
+    padding-inline: 50px;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    color: var(--clr-primary);
+    font-family: 'AvenirLTStd-black';
+}

@@ -1,0 +1,23 @@
+@font-face {
+    font-family: ProductSans-light;
+    src: url(../fonts/Google-sans-Font-Family/ProductSans-Light.ttf);
+}
+
+@font-face {
+    font-family: ProductSans-medium;
+    src: url(../fonts/Google-sans-Font-Family/ProductSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: ProductSans-Bold;
+    src: url(../fonts/Google-sans-Font-Family/ProductSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: AvenirLTStd-Book;
+    src: url(../fonts/avenir_ff/AvenirLTStd-Book.otf);
+}
+@font-face {
+    font-family: AvenirLTStd-Black;
+    src: url(../fonts/avenir_ff/AvenirLTStd-Black.otf);
+}

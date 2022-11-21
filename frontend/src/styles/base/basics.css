@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+html {
+    font-family: ProductSans-light;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.main {
+    background-color: var(--clr-1);
+}

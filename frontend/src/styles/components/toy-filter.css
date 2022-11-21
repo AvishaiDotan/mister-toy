@@ -1,0 +1,112 @@
+.toy-filter {
+    background-color: var(--clr-1);
+    padding-inline: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-shadow:  0px -2px 0px 0px inset var(--clr-secondary);
+}
+
+.toy-filter {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 50px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "filter"
+        "sort";
+}
+
+.toy-filter .filter {
+    grid-area: filter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toy-filter .sort {
+    grid-area: sort;
+}
+
+
+.toy-filter input[type="search"] {
+    flex-grow: 1;
+    max-width: 500px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.labels-multiple-select-container {
+    overflow-y: auto;
+    max-height: 100%;
+    padding: 10px;
+}
+
+
+.labels-multiple-select-container .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.labels-multiple-select-container .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.labels-multiple-select-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--clr1);
+}
+
+/* On mouse-over, add a grey background color */
+.labels-multiple-select-container .container:hover input~.checkmark {
+    background-color: var(--clr0);
+}
+
+/* When the checkbox is checked, add a blue background */
+.labels-multiple-select-container .container input:checked~.checkmark {
+    background-color: var(--clr-secondary);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.labels-multiple-select-container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.labels-multiple-select-container .container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.labels-multiple-select-container .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--clr1);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

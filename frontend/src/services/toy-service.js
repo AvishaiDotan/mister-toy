@@ -25,7 +25,7 @@ function remove(toyId) {
 }
 
 function save(toy) {
-  if (toy.id) return storageService.put(KEY, toy)
+  if (toy._id) return storageService.put(KEY, toy)
   return storageService.post(KEY, toy)
 }
 
