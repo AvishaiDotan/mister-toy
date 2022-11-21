@@ -1,0 +1,13 @@
+{
+  "name": "proj-node-server",
+  "version": "1.0.0",
+  "scripts": {
+    "baba": "dir",
+    "start": "nodemon --ignore \"./data\" server.js"
+  },
+  "author": "Me",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2"
+  }
+}
