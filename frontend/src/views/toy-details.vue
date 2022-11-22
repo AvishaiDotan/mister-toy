@@ -37,7 +37,6 @@ export default {
         this.$store.dispatch({ type: 'getToyById', id, })
             .then(toy => {
                 this.toy = toy
-                console.log(toy);
             })
     },
     computed: {

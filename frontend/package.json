@@ -7,8 +7,10 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
+    "chart.js": "^3.9.1",
     "element-plus": "^2.2.22",
     "vue": "^3.2.31",
+    "vue-chart-3": "^3.1.8",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
   },

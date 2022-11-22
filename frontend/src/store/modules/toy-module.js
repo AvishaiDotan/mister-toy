@@ -19,10 +19,8 @@ export default {
       }
     },
 
-    labels(state) {
-      let labels = toyService.getLabels().map(label => ({value: label, label}))
-      labels = JSON.parse(JSON.stringify(labels))
-      return labels
+    labels() {
+      return toyService.getLabels().map(label => ({ value: label, label }))
     }
 
   },
@@ -30,7 +28,23 @@ export default {
   mutations: {
     setToys(state, { toys }) {
       state.toys = toys
+    },
+
+    removeToy(state, { id }) {
+      const idx = state.toys.findIndex(toy => toy._id === id)
+      state.toys.splice(idx, 1)
+    },
+
+    saveToy(state, {toy, method}) {
+      if (method === 'put') {
+        const {_id} = toy
+        const toyIdx = state.toys.findIndex(toy => toy._id === _id)
+        state.toys[toyIdx] = toy
+      } else {
+        state.toys.unshift(toy)
+      }
     }
+
 
   },
 
@@ -47,22 +61,26 @@ export default {
         })
     },
 
-    deleteToy(context, { id }) {
-      toyService.remove(id)
-        .then(() => {
-          context.dispatch({ type: 'loadToys' })
-        })
+    deleteToy({commit}, { id }) {
+      return toyService.remove(id)
+      .then(() => {
+          commit({type:'removeToy', id})
+      })
+
     },
 
-    saveToy(context, { toy }) {
+    saveToy(context, { toy }) {    
       return toyService.save(toy)
         .then(() => {
+          if (toy._id) context.commit({type:'saveToy', toy, method: 'put'})
+          else context.commit({type:'saveToy', toy, method: 'post'})
+        })
+        .catch(() => {
           return context.dispatch({ type: 'loadToys' })
         })
     },
 
-    setFilter({commit}, { filterBy }) {
-      console.log(filterBy);
+    setFilter({ commit }, { filterBy }) {
       toyService.query(filterBy)
         .then(toys => commit({ type: 'setToys', toys }))
     }

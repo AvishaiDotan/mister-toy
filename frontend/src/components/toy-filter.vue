@@ -46,15 +46,15 @@ export default {
     return {
       filterBy: {
         txt: '',
-        inStock: false,
+        inStock: 'Stock',
         labels: ref([]),
         sortBy: {
-          prop: 'name',
+          prop: '',
           isDesc: true,
         }
       },
       sortProps: ['name', 'price'],
-      options: this.labels
+      options: this.labels,
     }
 
   },
@@ -66,7 +66,7 @@ export default {
     },
 
     setSort(prop) {
-      const sortBy = this.filterBy.sortBy
+      const {sortBy} = this.filterBy
 
       if (sortBy.prop === prop) sortBy.isDesc = !sortBy.isDesc
       sortBy.prop = prop
@@ -92,7 +92,7 @@ export default {
   created() {
     this.setFilter = utilService.debounce(this.setFilter, 1000)
 
-    this.setFilter()
+    // this.setFilter()
   },
 }
 </script>

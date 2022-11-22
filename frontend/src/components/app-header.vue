@@ -6,6 +6,7 @@
     <nav>
       <router-link class="home-link" to="/">Home</router-link>
       <router-link class="add-action" to="/edit">Add Toy</router-link>
+      <router-link class="add-action" to="/graphs">Graphs</router-link>
     </nav>
   </header>
 </template>
