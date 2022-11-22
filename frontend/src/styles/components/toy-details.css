@@ -1,18 +1,18 @@
 .toy-details {
     grid-area: toy-list;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    gap: 25px;
-    width: 50%;
+    gap: 10px;
+    width: 80%;
     margin: auto;
     background-color: var(--clr0);
     border-radius: 5px;
     box-shadow: 0.1px 0.1px 3px #565454;
     padding: 20px;
     position: relative;
+    margin-block-start: -100px;
 }
 
 .toy-details h2 {
@@ -43,3 +43,18 @@
     background-color: var(--clr1);
     border-radius: 10px;
 }
+
+.toy-details .edit-route {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: var(--clr-1);
+    transition: 0.4s;
+    font-size: 1.5rem;
+}
+
+.toy-details .edit-route:hover {
+    color: var(--clr-2);
+    cursor: pointer;
+}
+

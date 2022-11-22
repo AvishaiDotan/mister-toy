@@ -13,23 +13,15 @@
             <p>{{ inStock }}</p>
             <h3>Labels</h3>
             <ul>
-                <li v-for="label in toy.labels" :key="label">{{ label }}</li>
+                <el-tag v-for="label in toy.labels" :key="label" class="ml-2" type="danger">{{ label }}</el-tag>
             </ul>
-            <ul class="reviews">
-                <li v-for="review in toy.reviews" :key="review">{{ review }}</li>
-            </ul>
-
+            <router-link class="edit-route" :to="'/edit/' + toy._id">Edit</router-link>
         </section>
     </main>
 
 </template>
 
 <script>
-
-import { toyService } from "../services/toy-service"
-// import { showSuccessMsg, showErrorMsg, eventBus } from "../services/event-bus.service.js"
-
-
 export default {
     name: 'toy-details',
     props: {
@@ -43,7 +35,10 @@ export default {
     mounted() {
         const id = this.$route.params.id
         this.$store.dispatch({ type: 'getToyById', id, })
-            .then(toy => this.toy = toy)
+            .then(toy => {
+                this.toy = toy
+                console.log(toy);
+            })
     },
     computed: {
         inStock() {
@@ -52,7 +47,7 @@ export default {
         formattedDate() {
             const d = new Date(this.toy.createdAt)
             const cd = num => num.toString().padStart(2, 0)
-            return d.getFullYear()+"/"+cd(d.getMonth() + 1)+"/"+cd(d.getDate())
+            return d.getFullYear() + "/" + cd(d.getMonth() + 1) + "/" + cd(d.getDate())
         }
     }
 }

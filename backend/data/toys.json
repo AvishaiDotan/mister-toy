@@ -1,5 +1,15 @@
 [
   {
+    "name": "asdasd",
+    "price": 13,
+    "labels": [
+      "Baby"
+    ],
+    "inStock": true,
+    "createdAt": 1669126415201,
+    "_id": "9bRhc"
+  },
+  {
     "name": "12312",
     "price": 132,
     "labels": [],

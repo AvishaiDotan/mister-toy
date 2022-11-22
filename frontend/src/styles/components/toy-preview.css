@@ -29,7 +29,9 @@
 }
 
 
-
+.toy-preview > * {
+    align-items: center;
+}
 
 .toy-preview .actions-container {
     grid-area: actions-container;
