@@ -19,7 +19,7 @@ function query(filterBy) {
                   const regex = new RegExp(filterBy.txt, 'i')
                   //By Name
                   let filteredToys = toys.filter(toy => {
-                      return regex.test(toy.name) && filterBy.labels.every(label => toy.labels.includes(label))
+                      return regex.test(toy.name) && filterBy.labels.every(label => toy.labels.includes(label)) && (toy.inStock | filterBy.inStock)
                   })
                   
                   let sortedToys = filteredToys.sort((toy1, toy2) => {
