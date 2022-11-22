@@ -1,8 +1,23 @@
+const debounce = (func, wait) => {
+  let timeout
+
+  return (...args) => {
+    const later = () => {
+      clearTimeout(timeout)
+      func(...args)
+    }
+
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+  }
+}
+
 export const utilService = {
   saveToStorage,
   loadFromStorage,
   makeId,
   getRandomIntInclusive,
+  debounce
 }
 
 function saveToStorage(key, value) {

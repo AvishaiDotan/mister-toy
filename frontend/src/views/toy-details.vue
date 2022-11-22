@@ -1,21 +1,27 @@
 <template>
-    <section>
-        <h2>Toy Details</h2>
-        <div>
-            <h3>{{toy.name}}</h3>
-            <p>${{toy.price}}</p>
-            <p>{{toy.createAt}}</p>
-            <p>{{toy.inStock}}</p>
+    <main>
+        <section class="toy-details">
+            <router-link class="return-action" to="/">Return</router-link>
+            <h2>Toy Details</h2>
+            <h3>Name</h3>
+            <p>{{ toy.name }}</p>
+            <h3>Price</h3>
+            <p>${{ toy.price }}</p>
+            <h3>Date</h3>
+            <p>{{ formattedDate }}</p>
+            <h3>In Stock</h3>
+            <p>{{ inStock }}</p>
+            <h3>Labels</h3>
             <ul>
-                <li v-for="label in toy.labels" :key="label">{{label}}</li>
+                <li v-for="label in toy.labels" :key="label">{{ label }}</li>
             </ul>
-            <ul>
-                <li v-for="review in toy.reviews" :key="review">{{review}}</li>
+            <ul class="reviews">
+                <li v-for="review in toy.reviews" :key="review">{{ review }}</li>
             </ul>
-        </div>
-    </section>
-    <pre>{{toy}}</pre>
-    
+
+        </section>
+    </main>
+
 </template>
 
 <script>
@@ -39,6 +45,16 @@ export default {
         this.$store.dispatch({ type: 'getToyById', id, })
             .then(toy => this.toy = toy)
     },
+    computed: {
+        inStock() {
+            return (this.toy.inStock) ? 'Yes' : 'No'
+        },
+        formattedDate() {
+            const d = new Date(this.toy.createdAt)
+            const cd = num => num.toString().padStart(2, 0)
+            return d.getFullYear()+"/"+cd(d.getMonth() + 1)+"/"+cd(d.getDate())
+        }
+    }
 }
 
 </script>

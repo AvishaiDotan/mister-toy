@@ -2,7 +2,7 @@
 
 <template>
       <main>
-        <toy-filter :labels="labels"/>
+        <toy-filter @set-filter="setFilter" :labels="labels"/>
         <toy-list :toys="toys"/>
       </main>
 </template>
@@ -31,6 +31,13 @@
           labels() {
               return this.$store.getters.labels
           }
+      },
+
+      methods: {
+        setFilter(filterBy) {
+            filterBy = JSON.parse(JSON.stringify(filterBy))
+            this.$store.dispatch({ type: 'setFilter', filterBy })
+        }
       },
       components: {
         toyList,

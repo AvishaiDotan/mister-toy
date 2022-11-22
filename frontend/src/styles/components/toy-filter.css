@@ -28,6 +28,13 @@
 
 .toy-filter .sort {
     grid-area: sort;
+    display: grid;
+    grid-template-columns: 200px 100px 1fr 100px;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    padding: 20px;
+    font-family: ProductSans-medium;
 }
 
 

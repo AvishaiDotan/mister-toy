@@ -1,0 +1,45 @@
+.toy-details {
+    grid-area: toy-list;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    width: 50%;
+    margin: auto;
+    background-color: var(--clr0);
+    border-radius: 5px;
+    box-shadow: 0.1px 0.1px 3px #565454;
+    padding: 20px;
+    position: relative;
+}
+
+.toy-details h2 {
+    font-size: 3rem;
+}
+
+.toy-details h2, .toy-details h3 {
+    font-family: ProductSans-Bold;
+}
+
+.toy-details .return-action {
+    position: absolute;
+    color: var(--clr-1);
+    transition: 0.4s;
+    font-size: 1.5rem;
+    top: 10px;
+    left: 10px;
+}
+
+.toy-details .return-action:hover{
+    color: var(--clr-2);
+    cursor: pointer;
+}
+
+.toy-details .reviews {
+    list-style-type: disc;
+    padding: 20px;
+    background-color: var(--clr1);
+    border-radius: 10px;
+}

@@ -37,7 +37,7 @@ function postMany(entityType, newEntities) {
 
 function put(entityType, updatedEntity) {
   return query(entityType).then((entities) => {
-    const idx = entities.findIndex((entity) => entity.id === updatedEntity.id)
+    const idx = entities.findIndex((entity) => entity._id === updatedEntity._id)
     entities.splice(idx, 1, updatedEntity)
     _save(entityType, entities)
     return updatedEntity
@@ -46,7 +46,7 @@ function put(entityType, updatedEntity) {
 
 function remove(entityType, entityId) {
   return query(entityType).then((entities) => {
-    const idx = entities.findIndex((entity) => entity.id === entityId)
+    const idx = entities.findIndex((entity) => entity._id === entityId)
     entities.splice(idx, 1)
     _save(entityType, entities)
   })

@@ -13,19 +13,18 @@
                 </label>
                 <p>Labels</p>
                 <div class="labels-multiple-select-container">
-                    <label v-for="label in labels" :key="label.txt" class="container">
-                        {{ label.txt }}
-                        <input @input.stop="setCheck($event, labelName)" type="checkbox" checked="checked">
+                    <label v-for="label in labels" :key="label" class="container" :checked="false" >
+                        {{ label }}
+                        <input @input.stop="setCheck($event, label)" type="checkbox" :checked="toyToEdit.labels.includes(label)">
                         <span class="checkmark"></span>
                     </label>
                 </div>
                 <p>On Stock</p>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input @change="toyToEdit.inStock = ($event.target.checked === true)" :checked="toyToEdit.inStock" type="checkbox">
                     <span class="slider round"></span>
                 </label>
                 <span class="save-action" @click="save">Save</span>
-                <pre>{{labels}}</pre>
             </form>
         </section>
     </main>
@@ -39,6 +38,7 @@ export default {
     data() {
         return {
             toyToEdit: {},
+            toyLabels: []
         }
     },
 
@@ -50,11 +50,16 @@ export default {
 
         loadToyToEdit() {
             this.$store.dispatch({ type: 'getToyById', id: this.$route.params.id })
-                .then(toy => this.toyToEdit = toy)
+                .then(toy => {
+                    this.toyToEdit = toy
+                    this.toyLabels = toy.labels
+                })
+            
         },
 
         save() {
-            this.$store.dispatch({ type: 'saveToy', toy: this.toyToEdit })
+            const toy = JSON.parse(JSON.stringify(this.toyToEdit))
+            this.$store.dispatch({ type: 'saveToy', toy  })
                 .then(() => {
                     this.$router.push('/')
                 })
@@ -68,31 +73,15 @@ export default {
                 const idx = labels.findIndex(currLabel => currLabel === label)
                 labels.splice(idx, 1)
             }
-            this.toyToEdit = this.toyToEdit
         },
 
-        getLabels() {
-            return this.$store.getters.labels
-        }
+
         
     },
 
     computed: {
         labels() {
-
-            const allLabels = this.getLabels() 
-            const allLabelsMap = [];
-
-            const toyLabels = this.toyToEdit.labels
-            allLabels.forEach(label => {
-                allLabelsMap.push(
-                    {   
-                        isOn: (toyLabels.includes(label)) ? true : false,
-                        txt:label  
-                    })
-            })
-
-            return allLabelsMap
+            return this.$store.getters.labels
         }
     },
 

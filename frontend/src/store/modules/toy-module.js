@@ -46,9 +46,11 @@ export default {
         .then(toys => commit({ type: 'setToys', toys }))
     },
     getToyById(context, { id }) {
-      console.log(context);
       return toyService.getById(id)
-        .then(toy => JSON.parse(JSON.stringify(toy)))
+        .then(toy => {
+          console.log(toy);
+          return JSON.parse(JSON.stringify(toy))
+        })
     },
 
     deleteToy(context, { id }) {
@@ -63,7 +65,14 @@ export default {
         .then(() => {
           context.dispatch({ type: 'loadToys' })
         })
+    },
+
+    setFilter({commit}, { filterBy }) {
+      toyService.query(filterBy)
+        .then(toys => commit({ type: 'setToys', toys }))
     }
+
+
 
 
   },
