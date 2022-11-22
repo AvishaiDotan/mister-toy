@@ -5,26 +5,40 @@
       <input v-model="filterBy.txt" @input="setFilter" type="search" class="form-input" placeholder="Search Toy" />
 
       <div class="specific-filter">
-        <div class="labels-multiple-select-container">
-          <label v-for="label in labels" :key="label" class="container">
-            {{ label }}
-            <input @input.stop="setCheck($event, label)" type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-        </div>
+        <div style="display: inline-block; margin-left: 20px">
+          <p style="margin-left: 10px">Labels</p>
+            <el-select @change="setFilter"
+              v-model="filterBy.labels"
+              multiple
+              collapse-tags
+              placeholder="Select"
+              style="width: 240px"
+            >
+            <el-option
+              v-for="item in options"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value"
+            />
+            </el-select>
+      </div>
+
         <p>In Stock</p>
-        <label class="switch">
-          
-          <input @change="setInStockFilter($event)" checked="false" type="checkbox">
+        <label class="switch" v-if="filterBy.inStock">
+          <input  @change="setInStockFilter($event)" :checked="filterBy.inStock" type="checkbox">
           <span class="slider round"></span>
         </label>
       </div>
     </div>
 
     <div class="sort">
-      <p @click.stop="setSort('name')">Name {{ arrow }}</p>
-      <p @click.stop="setSort('price')">Price {{ arrow }}</p>
+      <p v-for="prop in sortProps" 
+        :class="{'selected': isSelected(prop)}"
+        @click.stop="setSort(prop)">
+        {{prop}} <span>{{ arrow(prop) }}</span>
+      </p>
     </div>
+
 
   </section>
 
@@ -32,8 +46,10 @@
 
 
 
+
 <script>
 import { utilService } from '../services/util-service';
+import { ref } from 'vue'
 
 
 export default {
@@ -47,50 +63,51 @@ export default {
       filterBy: {
         txt: '',
         inStock: false,
-        labels: [],
+        labels: ref([]),
         sortBy: {
-          prop: '',
-          isDesc: false,
+          prop: 'name',
+          isDesc: true,
         }
       },
-
+      sortProps: ['name', 'price'],
+      options: this.labels
     }
+
   },
   methods: {
     setFilter() {
-      this.$emit('set-filter', this.filterBy)
-    },
-    setSort(prop) {
-      const sortBy = this.filterBy.sortBy
-      if (sortBy.prop === prop) sortBy.isDesc = !sortBy.isDesc
-      sortBy.prop = prop
-      this.setFilter()
+      const filter = JSON.parse(JSON.stringify(this.filterBy))
+      this.$emit('set-filter', filter)
     },
 
-    setCheck(ev, label) {
-      if (ev.target.checked) {
-        this.filterBy.labels.push(label)
-      } else {
-        const idx = this.filterBy.labels.findIndex(currLabel => currLabel === label)
-        this.filterBy.labels.splice(idx, 1)
-      }
+    setSort(prop) {
+      const sortBy = this.filterBy.sortBy
+
+      if (sortBy.prop === prop) sortBy.isDesc = !sortBy.isDesc
+      sortBy.prop = prop
       this.setFilter()
     },
 
     setInStockFilter(ev) {
       this.filterBy.inStock = (ev.target.checked !== true)
       this.setFilter()
-    }
+    },
 
-  },
+    isSelected(prop) {
+      return this.filterBy.sortBy.prop === prop
+    },
 
-  computed: {
-    arrow() {
+    arrow(prop) {
+      if (!this.isSelected(prop)) return ''
       return (this.filterBy.sortBy.isDesc) ? '↓' : '↑'
-    }
+    },
+
   },
+  
   created() {
     this.setFilter = utilService.debounce(this.setFilter, 1000)
+
+    this.setFilter()
   },
 }
 </script>
@@ -159,6 +176,4 @@ input:checked+.slider:before {
   border-radius: 50%;
 }
 </style>
-
-
 

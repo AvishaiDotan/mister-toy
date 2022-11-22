@@ -1,18 +1,24 @@
 import { storageService } from './storage-service.js'
 import { utilService } from './util-service.js'
+import { httpService } from './http.service.js'
 
 const labels = ["On wheels", "Box game", "Art", "Baby", "Doll", "Puzzle", "Outdoor"]
 const KEY = 'toys_db'
-_createToys()
+
+const api_key = 'toy/'
+
 
 export const toyService = {
   query,
   getById,
   remove,
   save,
+  getLabels,
 }
 
 function query(filterBy) {
+  return httpService.get(api_key, {filterBy})
+
   return storageService.query(KEY)
             .then(toys => {
                 if (!filterBy) return toys
@@ -34,55 +40,27 @@ function query(filterBy) {
 }
 
 function getById(toyId) {
+  return httpService.get(api_key + toyId)
   return storageService.get(KEY, toyId)
 }
 
 function remove(toyId) {
+  return httpService.delete(api_key + toyId)
   return storageService.remove(KEY, toyId)
 }
 
 function save(toy) {
-  if (toy._id) return storageService.put(KEY, toy)
-  return storageService.post(KEY, toy)
+  if (toy._id) httpService.put(api_key + toy._id, {toy})
+  return httpService.post(api_key, {toy})
+  // if (toy._id) return storageService.put(KEY, toy)
+  // return storageService.post(KEY, toy)
+}
+
+function getLabels() {
+  return labels
 }
 
 
-function _createToys() {
-  let toys = utilService.loadFromStorage(KEY)
-  if (!toys || !toys.length) {
-    toys = [
-      {
-        "_id": "t101",
-        "name": "Talking Robot",
-        "price": 280,
-        "labels": ["Doll", "Battery Powered", "Baby"],
-        "createdAt": 1631031801011,
-        "inStock": false,
-        reviews: _getRandomReviews(),
-      },
-      {
-        "_id": "t102",
-        "name": "Baz sHENOT oR",
-        "price": 233,
-        "labels": ["Doll", "Baby"],
-        "createdAt": 1631031801011,
-        "inStock": true,
-        reviews: _getRandomReviews(),
-      },
-      {
-        "_id": "t103",
-        "name": "f-16",
-        "price": 153,
-        "labels": ["Doll", "Battery Powered", "Baby", 'Dragon'],
-        "createdAt": 1631031801011,
-        "inStock": true,
-        reviews: _getRandomReviews(),
-      },
-    ]
-    utilService.saveToStorage(KEY, toys)
-  }
-  return toys
-}
 
 function _getRandomReviews() {
   const reviews = [
@@ -111,8 +89,8 @@ function _getRandomReviews() {
   for (var i = 0; i < amount; i++) {
     toyReviews.push(reviews[utilService.getRandomIntInclusive(0, reviews.length)])
   }
-  console.log(toyReviews);
   return toyReviews
 }
+
 
 

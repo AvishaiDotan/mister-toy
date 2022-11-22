@@ -8,3 +8,20 @@
     color: var(--clr-primary);
     font-family: 'AvenirLTStd-black';
 }
+
+.main-header .add-action, .main-header .home-link {
+    background-color: var(--clr-secondary);
+    padding: 10px;
+    border-radius: 2em;
+    color: var(--clr1);
+    transition: 0.4s;
+}
+
+.main-header .add-action:hover, .main-header .home-link:hover {
+    box-shadow: 0.1px 0.1px 1px 0.2px var(--clr-secondary)
+}
+
+.main-header nav {
+    display: flex;
+    gap: 10px;
+}

@@ -20,15 +20,9 @@ export default {
     },
 
     labels(state) {
-      const allLables = []
-
-      state.toys.forEach(({ labels }) => {
-        labels.forEach(label => {
-          if (!allLables.includes(label)) allLables.push(label)
-        })
-      });
-
-      return allLables
+      let labels = toyService.getLabels().map(label => ({value: label, label}))
+      labels = JSON.parse(JSON.stringify(labels))
+      return labels
     }
 
   },
@@ -42,13 +36,13 @@ export default {
 
   actions: {
     loadToys({ commit }) {
-      toyService.query()
+      return toyService.query()
         .then(toys => commit({ type: 'setToys', toys }))
     },
+
     getToyById(context, { id }) {
       return toyService.getById(id)
         .then(toy => {
-          console.log(toy);
           return JSON.parse(JSON.stringify(toy))
         })
     },
@@ -63,11 +57,12 @@ export default {
     saveToy(context, { toy }) {
       return toyService.save(toy)
         .then(() => {
-          context.dispatch({ type: 'loadToys' })
+          return context.dispatch({ type: 'loadToys' })
         })
     },
 
     setFilter({commit}, { filterBy }) {
+      console.log(filterBy);
       toyService.query(filterBy)
         .then(toys => commit({ type: 'setToys', toys }))
     }

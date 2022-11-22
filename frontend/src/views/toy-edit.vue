@@ -12,10 +12,10 @@
                     <input v-model="toyToEdit.price" type="number">
                 </label>
                 <p>Labels</p>
-                <div class="labels-multiple-select-container">
+                <div class="labels-multiple-select-container" v-if="toyToEdit">
                     <label v-for="label in labels" :key="label" class="container" :checked="false" >
                         {{ label }}
-                        <input @input.stop="setCheck($event, label)" type="checkbox" :checked="toyToEdit.labels.includes(label)">
+                        <input @input.stop="setCheck($event, label)" type="checkbox" checked="isChecked(label)">
                         <span class="checkmark"></span>
                     </label>
                 </div>
@@ -82,6 +82,10 @@ export default {
     computed: {
         labels() {
             return this.$store.getters.labels
+        },
+
+        isChecked(label) {
+            return this.toyToEdit.labels.includes(label)
         }
     },
 
@@ -89,7 +93,8 @@ export default {
         const id = this.$route.params?.id
 
         if (!id) {
-            this.toyToEdit = this.getEmptyToy()
+            const emptyToy = JSON.parse(JSON.stringify(this.getEmptyToy()))
+            this.toyToEdit = emptyToy
             return
         }
 
