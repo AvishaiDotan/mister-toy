@@ -4,6 +4,8 @@ const cors = require('cors')
 const toysService = require('./services/toys.service')
 // const cookieParser = require('cookie-parser')
 
+const app = express()
+app.use(express.json())
 
 
 if (process.env.NODE_ENV === 'production') {
@@ -20,16 +22,9 @@ if (process.env.NODE_ENV === 'production') {
     app.use(cors(corsOptions))
 }
 
-
-
-
-
-const app = express()
-
 // Express Config:
 // app.use(express.static('public'))
 // app.use(cookieParser())
-app.use(express.json())
 
 
 
