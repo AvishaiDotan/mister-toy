@@ -70,6 +70,7 @@ export default {
     },
 
     saveToy(context, { toy }) {    
+      
       return toyService.save(toy)
         .then(() => {
           if (toy._id) context.commit({type:'saveToy', toy, method: 'put'})
