@@ -4,9 +4,6 @@
             <form>
                 <router-link class="return-action" to="/">Return</router-link>
                 <p>Name</p>
-                <!-- <label>
-                    <input v-model="toyToEdit.name" type="text">
-                </label> -->
                 <el-input v-model="toyToEdit.name" type="text" placeholder="Toy's Name" />
                 <p>Price</p>
                 <label>

@@ -4,7 +4,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import toyAPP from '../views/toy-app.vue'
 import toyEdit from '../views/toy-edit.vue'
 import toyDetails from '../views/toy-details.vue'
-import graphs from '../views/graphs.vue'
+import dashboard from '../views/dashboard.vue'
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -27,8 +27,8 @@ const router = createRouter({
       component: toyDetails
     },
     {
-      path: '/graphs',
-      component: graphs
+      path: '/dashboard',
+      component: dashboard
     },
   ],
 })

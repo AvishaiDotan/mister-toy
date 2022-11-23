@@ -7,6 +7,7 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
+    "axios": "^1.2.0",
     "chart.js": "^3.9.1",
     "element-plus": "^2.2.22",
     "vue": "^3.2.31",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.2",
     "jsdom": "^19.0.0",
+    "sass": "^1.56.1",
     "vite": "^2.8.4"
   }
 }

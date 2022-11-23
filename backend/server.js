@@ -33,7 +33,6 @@ app.get('/api/toy', (req, res) => {
         filterBy.inStock = (filterBy.inStock === 'false') ? false : true
     }
 
-    console.log(filterBy);
 
     // const filterBy = {
     //     title: title || '',

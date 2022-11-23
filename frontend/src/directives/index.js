@@ -4,16 +4,6 @@ export const focusDirective = {
   },
 }
 
-export const rainbowDirective = {
-  mounted(el) {
-    el.onkeyup = () => {
-      const color = _getRandomColor()
-      el.style.backgroundColor = color
-      el.style.color = _isDarkColor(color) ? 'white' : 'black'
-    }
-  },
-}
-
 export const customOnDirective = {
   mounted(el, binding) {
     console.log('binding', binding)
