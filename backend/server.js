@@ -1,17 +1,27 @@
 const express = require('express')
-// const cookieParser = require('cookie-parser')
+const path = require('path')
 const cors = require('cors')
+const toysService = require('./services/toys.service')
+// const cookieParser = require('cookie-parser')
 
-const corsOptions = {
-    origin: ['http://127.0.0.1:3030',
-        'http://localhost:3030',
-        'http://127.0.0.1:3000',
-        'http://localhost:3000'],
-    credentials: true
+
+
+if (process.env.NODE_ENV === 'production') {
+    // Express serve static files on production environment
+    app.use(express.static(path.resolve(__dirname, 'public')))
+} else {
+    const corsOptions = {
+        origin: ['http://127.0.0.1:3030',
+            'http://localhost:3030',
+            'http://127.0.0.1:3000',
+            'http://localhost:3000'],
+        credentials: true
+    }
+    app.use(cors(corsOptions))
 }
 
 
-const toysService = require('./services/toys.service')
+
 
 
 const app = express()
@@ -20,7 +30,7 @@ const app = express()
 // app.use(express.static('public'))
 // app.use(cookieParser())
 app.use(express.json())
-app.use(cors(corsOptions))
+
 
 
 // Get Requests
@@ -32,13 +42,6 @@ app.get('/api/toy', (req, res) => {
         filterBy.sortBy.isDesc = (filterBy.sortBy.isDesc === 'false') ? false : true
         filterBy.inStock = (filterBy.inStock === 'false') ? false : true
     }
-
-
-    // const filterBy = {
-    //     title: title || '',
-    //     page: +page || 0
-    // }
-    //filterBy
 
     toysService.query(filterBy)
         .then(data => res.send(data))
