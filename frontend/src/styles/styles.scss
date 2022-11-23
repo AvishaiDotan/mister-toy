@@ -1,0 +1,18 @@
+@import './base/reset.css';
+@import './setup/_mixin.scss';
+@import './setup/functions';
+
+@import './base/animate.css';
+
+@import './base/_vars.scss';
+@import './base/_basics.scss';
+@import './base/typography.css';
+
+@import './base/_layouts.scss';
+
+@import 'components/_main-header.scss';
+@import 'components/_toy-filter.scss';
+@import 'components/_toy-preview.scss';
+@import 'components/_toy-edit.scss';
+@import 'components/_toy-details.scss';
+@import 'components/_dashboard.scss';

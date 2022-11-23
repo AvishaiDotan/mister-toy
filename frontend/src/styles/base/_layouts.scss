@@ -1,24 +1,30 @@
 .main-layout {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-        "app-header"
-        "main";
-}
+    grid-template-columns: $layoutPadding 1fr $layoutPadding;
 
-.main-header {
-    grid-area: app-header;
+    >* {
+        grid-column: 2;
+    }
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    >*.full {
+        grid-column: 1 / -1;
+    }
+
+    @include for-narrow-layout {
+        @include layoutGTC($break-narrow);
+    }
+
+    @include for-normal-layout {
+        @include layoutGTC($break-normal);
+    }
+
+    @include for-wide-layout {
+        @include layoutGTC($break-wide);
+    }
 }
 
 main {
-    grid-area: main;
+    grid-column: 2;
     display: grid;
     grid-template-columns: 200px 1fr 1fr 1fr 200px;
     grid-template-rows: 150px 1fr 1fr 100px;

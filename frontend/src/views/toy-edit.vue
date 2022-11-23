@@ -1,7 +1,9 @@
 <template>
-    <main>
+    <main class="full">
         <section class="toy-edit">
+            
             <form>
+                <h2>Add Toy</h2>
                 <router-link class="return-action" to="/">Return</router-link>
                 <p>Name</p>
                 <el-input v-model="toyToEdit.name" type="text" placeholder="Toy's Name" />

@@ -1,7 +1,7 @@
 
 
 <template>
-      <main>
+      <main class="full">
         <toy-filter @set-filter="setFilter" :labels="labels"/>
         <toy-list :toys="toys"/>
       </main>

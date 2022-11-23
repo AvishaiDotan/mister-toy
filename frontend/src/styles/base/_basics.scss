@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box; 
+}
+
+html {
+    font-family: ProductSans-light;
+    font-size: rem(20px);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+main {
+    background-color: lighten($clr-secondary, 30%);
+    min-height: 100vh;
+}
+

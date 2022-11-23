@@ -1,7 +1,7 @@
 <template>
     <section>
         <label>
-            <el-select v-model="selectedStat" class="m-2" placeholder="Select" size="large">
+            <el-select v-model="selectedStat" multiple collapse-tags placeholder="Select" style="width: 240px">
                 <el-option v-for="item in statOptions" :key="item.value" :label="item.label" :value="item.value" />
             </el-select>
         </label>
@@ -13,6 +13,7 @@
 import { DoughnutChart, BarChart, LineChart, PieChart, PolarAreaChart, RadarChart } from 'vue-chart-3';
 import { Chart, registerables } from "chart.js";
 Chart.register(...registerables);
+import { ref } from 'vue'
 
 export default {
     components: { DoughnutChart, BarChart, LineChart, PieChart, PolarAreaChart, RadarChart },
@@ -24,9 +25,9 @@ export default {
 
     data() {
         return {
-            selectedStat: '',
+            selectedStat: ref([]),
             testData: {
-                labels: ['Paris', 'Nîmes', 'Toulon', 'Perpignan', 'Autre'],
+                labels: [],
                 datasets: [
                     {
                         data: [30, 40, 60, 70, 5],
@@ -85,42 +86,37 @@ export default {
 
             const toysMap = this.toys.reduce((prev, toy) => {
                 toy.labels.forEach(label => {
-                    if (!chartData.labels.includes(label)) chartData.labels.push(label)
-                    if (this.selectedStat === 'Frequency') {
-                        prev[label + 'Frequency'] = prev[label + 'Frequency'] || 0
-                        prev[label + 'Frequency']++
-                    } else if (this.selectedStat === 'Price') {
-                        prev[label + 'Price'] = prev[label + 'Price'] || 0
-                        prev[label + 'Price'] += toy.price
-                    } else if (this.selectedStat === 'Reviews') {
-                        prev[label + 'Reviews'] = prev[label + 'Reviews'] || 0
-                        prev[label + 'Reviews'] += toy.reviews.length
-                    } else if (this.selectedStat === 'Stock') {
-                        prev[label + 'Stock'] = prev[label + 'Stock'] || 0
-                        if (toy.inStock) prev[label + 'Stock']++
-                    }
+
+                    this.selectedStat.forEach(stat => {
+                        prev[label + stat] = prev[label + stat] || 0
+
+                        if (stat === 'Frequency') prev[label + stat]++
+                        else if (stat === 'Price') prev[label + stat] += toy.price
+                        else if (stat === 'Reviews') prev[label + stat] += toy.reviews.length
+                        else if (stat === 'Stock' & toy.inStock) prev[label + stat]++
+
+                    })
 
                 })
                 return prev
             }, {})
 
-
-           
+            console.log(toysMap);
             for (const key in toysMap) {
-                console.log(key);
-                if (this.selectedStat === 'Price') chartData.datasets[1].data.push(toysMap[key])
-                else if (this.selectedStat === 'Reviews') chartData.datasets[2].data.push(toysMap[key] * 100)
-                else if (key.includes('Stock')) chartData.datasets[3].data.push((toysMap[key] / toysMap[key.replace('InStock', '')]) * 1000)
-                else if (this.selectedStat === 'Stock') {
-                    chartData.datasets[0].data.push(toysMap[key] * 100)
-                    chartData.labels.push(key)
-                }
+
+                const stats = ['Frequency', 'Price', 'Reviews', 'Stock']
+
+                stats.forEach((stat, idx) => {
+                    if (key.includes(stat)) chartData.datasets[idx].data.push(toysMap[key])
+
+                    if (key.includes(stat) && !chartData.labels.includes(key.replace(stat, ""))) chartData.labels.push(key.replace(stat, ""))
+                })
             }
 
             chartData.datasets.forEach((dataset, idx) => {
-                if (!dataset.label.includes(this.selectedStat)) chartData.datasets.splice(idx, 1)
+                if (!dataset.data.length) chartData.datasets.splice(idx, 1)
             })
-            // console.log(chartData);
+
             return chartData
 
 

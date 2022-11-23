@@ -1,17 +1,18 @@
 <template>
 
-    <main v-if="toys">
-        <p>Dashboard</p>
+    <main class="full dashboard" v-if="toys">
+        <header>
+            <h2>Dashboard</h2>
+        </header>
+
         <label>
             <el-select v-model="selectedCharts" multiple collapse-tags placeholder="Select" style="width: 240px">
                 <el-option v-for="item in chartsOptions" :key="item.value" :label="item.label" :value="item.value" />
             </el-select>
         </label>
 
-        <section>
-            <div v-for="chart in selectedCharts">
-                <chart-comp :chart="chart" :toys="toys" />
-            </div>
+        <section class="charts-container">
+            <chart-comp v-for="chart in selectedCharts" :chart="chart" :toys="toys" />
         </section>
     </main>
 
@@ -26,7 +27,7 @@ export default {
     data() {
         return {
             toys: [],
-            selectedCharts: ref([]),
+            selectedCharts: ref(['DoughnutChart', 'BarChart']),
             chartsOptions: [{
                 value: 'DoughnutChart',
                 label: 'Doughnut Chart'

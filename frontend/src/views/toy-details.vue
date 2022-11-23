@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="full">
         <section class="toy-details">
             <router-link class="return-action" to="/">Return</router-link>
             <h2>Toy Details</h2>

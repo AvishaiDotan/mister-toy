@@ -1,0 +1,20 @@
+// COLOR PALLET
+$clr-primary: #D92B04;
+$clr-secondary: #FF3654;
+
+$clr-2: rgb(24, 24, 24);
+$clr-1: #cbcbcb;
+$clr0: #FFEFF0;
+$clr1: #FFFFFF;
+
+// LAYOUT
+$layoutPadding: 20px;
+
+// LAYOUT BREAKPOINTS
+$break-narrow: 500px;
+$break-normal: 800px;
+$break-wide: 1200px;
+
+$padded-break-narrow: $break-narrow + $layoutPadding * 2;
+$padded-break-normal: $break-normal + $layoutPadding * 2;
+$padded-break-wide: $break-wide + $layoutPadding * 2;

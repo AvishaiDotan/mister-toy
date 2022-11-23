@@ -1,0 +1,68 @@
+.toy-edit {
+    grid-area: toy-list;
+
+    h2 {
+        font-size: 3rem;
+        font-family: ProductSans-Bold;
+    }
+
+    form {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+        width: 50%;
+        margin: auto;
+        background-color: $clr0;
+        border-radius: 5px;
+        box-shadow: 0.1px 0.1px 3px #565454;
+        padding: 20px;
+        position: relative;
+
+        p {
+            font-family: ProductSans-medium;
+            font-size: 1.2rem;
+        }
+
+        .save-action {
+            position: absolute;
+            color: $clr-1;
+            transition: 0.4s;
+            font-size: 1.5rem;
+            bottom: 10px;
+            right: 10px;
+
+            &:hover {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                color: $clr-2;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .return-action {
+        position: absolute;
+        color: $clr-1;
+        transition: 0.4s;
+        font-size: 1.5rem;
+        top: 10px;
+        left: 10px;
+
+        &:hover {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: $clr-2;
+            cursor: pointer;
+
+        }
+    }
+
+    .el-radio-group {
+        display: flex;
+    }
+
+}

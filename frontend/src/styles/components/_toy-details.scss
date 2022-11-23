@@ -1,0 +1,62 @@
+.toy-details {
+    grid-area: toy-list;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+    background-color: $clr0;
+    border-radius: 5px;
+    box-shadow: 0.1px 0.1px 3px #565454;
+    padding: 20px;
+    position: relative;
+    margin-block-start: -100px;
+
+    h2 {
+        font-size: 3rem;
+        font-family: ProductSans-Bold;
+    }
+
+    h3 {
+        font-family: ProductSans-Bold;
+    }
+
+
+    .return-action {
+        position: absolute;
+        color: $clr-1;
+        transition: 0.4s;
+        font-size: 1.5rem;
+        top: 10px;
+        left: 10px;
+
+        &:hover {
+            color: $clr-2;
+            cursor: pointer;
+        }
+    }
+
+    .reviews {
+        list-style-type: disc;
+        padding: 20px;
+        background-color: $clr1;
+        border-radius: 10px;
+    }
+
+    .edit-route {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: $clr-1;
+        transition: 0.4s;
+        font-size: 1.5rem;
+
+        &:hover {
+            color: $clr-2;
+            cursor: pointer;
+        }
+
+    }
+}
