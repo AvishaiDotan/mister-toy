@@ -1,7 +1,6 @@
 <template>
-    <main class="full">
+    <main class="full toy-edit-container">
         <section class="toy-edit">
-            
             <form>
                 <h2>Add Toy</h2>
                 <router-link class="return-action" to="/">Return</router-link>
@@ -47,23 +46,17 @@ export default {
             return emptyToy
         },
 
-        loadToyToEdit() {
-            this.$store.dispatch({ type: 'getToyById', id: this.$route.params.id })
-                .then(toy => {
-                    this.toyToEdit = toy
-                    this.toyLabels = toy.labels
-                })
-
+        async loadToyToEdit() {
+            this.toyToEdit = await this.$store.dispatch({ type: 'getToyById', id: this.$route.params.id })
+            this.toyLabels = this.toyToEdit.labels
         },
 
-        save() {
+        async save() {
             const toy = JSON.parse(JSON.stringify(this.toyToEdit))
             toy.inStock = (toy.inStock === 'Stock') ? true : false
-            console.log(toy);
-            this.$store.dispatch({ type: 'saveToy', toy })
-                .then(() => {
-                    this.$router.push('/')
-                })
+
+            await this.$store.dispatch({ type: 'saveToy', toy })
+            this.$router.push('/')
         },
 
     },

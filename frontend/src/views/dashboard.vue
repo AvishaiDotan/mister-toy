@@ -6,6 +6,7 @@
         </header>
 
         <label>
+            <p style="text-align: center; padding: 5px;">Select Charts</p>
             <el-select v-model="selectedCharts" multiple collapse-tags placeholder="Select" style="width: 240px">
                 <el-option v-for="item in chartsOptions" :key="item.value" :label="item.label" :value="item.value" />
             </el-select>

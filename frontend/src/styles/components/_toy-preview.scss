@@ -20,6 +20,7 @@
 
         .toy-name {
             grid-area: toy-name;
+            text-transform: capitalize;
         }
 
         .toy-price {

@@ -33,11 +33,7 @@ export default {
         }
     },
     mounted() {
-        const id = this.$route.params.id
-        this.$store.dispatch({ type: 'getToyById', id, })
-            .then(toy => {
-                this.toy = toy
-            })
+        this.setToy()
     },
     computed: {
         inStock() {
@@ -48,7 +44,14 @@ export default {
             const cd = num => num.toString().padStart(2, 0)
             return d.getFullYear() + "/" + cd(d.getMonth() + 1) + "/" + cd(d.getDate())
         }
-    }
+    },
+
+    methods: {
+        async setToy() {
+            const id = this.$route.params.id
+            this.toy = await this.$store.dispatch({ type: 'getToyById', id, })
+        }
+    },
 }
 
 </script>

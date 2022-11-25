@@ -1,5 +1,4 @@
 import { toyService } from '../../services/toy-service'
-import { utilService } from '../../services/util-service'
 
 export default {
   state: {
@@ -35,59 +34,46 @@ export default {
       state.toys.splice(idx, 1)
     },
 
-    saveToy(state, {toy, method}) {
-      if (method === 'put') {
-        const {_id} = toy
-        const toyIdx = state.toys.findIndex(toy => toy._id === _id)
-        state.toys[toyIdx] = toy
-      } else {
-        state.toys.unshift(toy)
-      }
-    }
+    putToy(state, {toy}) {
+      // console.log('putToy', toy);
+      const {_id} = toy
+      const toyIdx = state.toys.findIndex(toy => toy._id === _id)
+      state.toys[toyIdx] = toy
+      return toy
+    },
 
+    postToy(state, {toy}) {
+      state.toys.unshift(toy)
+      return toy
+    }
 
   },
 
   actions: {
-    loadToys({ commit }) {
-      return toyService.query()
-        .then(toys => commit({ type: 'setToys', toys }))
+    async loadToys({ commit }, {filterBy}) {
+      const toys = await toyService.query(filterBy)
+      commit({ type: 'setToys', toys })
     },
 
-    getToyById(context, { id }) {
-      return toyService.getById(id)
-        .then(toy => {
-          return JSON.parse(JSON.stringify(toy))
-        })
+    async getToyById(context, { id }) {
+      return await toyService.getById(id)
     },
 
-    deleteToy({commit}, { id }) {
-      return toyService.remove(id)
-      .then(() => {
-          commit({type:'removeToy', id})
-      })
-
+    async deleteToy({commit}, { id }) {
+      const deletedToy = await toyService.remove(id)
+      commit({type:'removeToy', id})
     },
 
-    saveToy(context, { toy }) {    
-      
-      return toyService.save(toy)
-        .then(() => {
-          if (toy._id) context.commit({type:'saveToy', toy, method: 'put'})
-          else context.commit({type:'saveToy', toy, method: 'post'})
-        })
-        .catch(() => {
-          return context.dispatch({ type: 'loadToys' })
-        })
+    async saveToy({commit}, { toy }) {   
+      const method = toy._id ? 'putToy' : 'postToy'
+      const {toy: savedToy} = await toyService.save(toy)
+      return commit({type: method, toy: savedToy})
     },
 
-    setFilter({ commit }, { filterBy }) {
-      toyService.query(filterBy)
-        .then(toys => commit({ type: 'setToys', toys }))
+    async setFilter({ commit }, { filterBy }) {
+      const toys = await toyService.query(filterBy)
+      commit({ type: 'setToys', toys })
     }
-
-
-
 
   },
 }

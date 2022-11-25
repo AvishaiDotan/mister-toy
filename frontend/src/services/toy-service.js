@@ -17,43 +17,20 @@ export const toyService = {
 }
 
 function query(filterBy) {
-  return httpService.get(api_key, {filterBy})
-
-  return storageService.query(KEY)
-            .then(toys => {
-                if (!filterBy) return toys
-                  const regex = new RegExp(filterBy.txt, 'i')
-                  //By Name
-                  let filteredToys = toys.filter(toy => {
-                      return regex.test(toy.name) && filterBy.labels.every(label => toy.labels.includes(label)) && (toy.inStock | filterBy.inStock)
-                  })
-                  
-                  let sortedToys = filteredToys.sort((toy1, toy2) => {
-                      const order = (filterBy.sortBy.isDesc) ? [toy1, toy2] : [toy2, toy1]
-                      if (filterBy.sortBy.prop === 'price') return order[0].price - order[1].price
-                      else return order[0].name.localeCompare(order[1].name)
-                  })
-                  return sortedToys
-                }
-            )
-
+  return httpService.get(api_key, filterBy)
 }
 
 function getById(toyId) {
   return httpService.get(api_key + toyId)
-  return storageService.get(KEY, toyId)
 }
 
 function remove(toyId) {
   return httpService.delete(api_key + toyId)
-  return storageService.remove(KEY, toyId)
 }
 
 function save(toy) {
-  if (toy._id) httpService.put(api_key + toy._id, {toy})
-  return httpService.post(api_key, {toy})
-  // if (toy._id) return storageService.put(KEY, toy)
-  // return storageService.post(KEY, toy)
+  if (toy._id) return httpService.put(api_key + toy._id, {toy})
+  return httpService.post(api_key, toy)
 }
 
 function getLabels() {

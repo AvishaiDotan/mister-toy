@@ -1,0 +1,602 @@
+[
+    {
+        "fullname": "Violent Disaster",
+        "username": "Violent Disu4ster",
+        "password": "$2b$15$Yck0EBi1FAsLjsI1JSHGTezwKUMXK/H3jeemdNlMugf6cpA8PwJwu",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Loose Unit",
+        "username": "Loose Unit",
+        "password": "$2b$15$DtZgbygEDGj78rJgAvlxf.YDlSY1Z1CyHw/0lN9jSxz2DGYrQLC2K",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Bold Cycle",
+        "username": "Bold Cycle",
+        "password": "$2b$15$i2wUdDL4D4dZ9hIgOnTjceSLjPSR/ciKDytFjDpoF9vMkW15sMMai",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Friendly Bone",
+        "username": "Friendly Bone",
+        "password": "$2b$15$PRp2dPWEJi.2jUYbnih//enVoP6f/d76sDPZhGWtMsbYDIkBsFIk6",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Ready Cold",
+        "username": "Rev849dy Cold",
+        "password": "$2b$15$kp18VBMlGGS.ALM0NedRIuWirsYSzJDi66HBVmzRbou0VwXmRV6wm",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Meek Idea",
+        "username": "Meek Idet610",
+        "password": "$2b$15$CuWUpOMCnhN5lwPxfCegF.EC31Of6JzEMnNCTVaxYYEWlMd5g886i",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Scaly Series",
+        "username": "Sce1277ly Series",
+        "password": "$2b$15$eEtiHQog6rpxe/ENX/26meXP49OpFIhFrZ7RUbP03LgKCVu9S8Aqi",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Kooky Lock",
+        "username": "Kooky Lock",
+        "password": "$2b$15$Ycop8iCxwKCtIviOMAZFq.G86KoE5aVJnYMm7/hfHmZSC.FvUn.3G",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Elderly Client",
+        "username": "Elderly Client",
+        "password": "$2b$15$PQhbI/MhFGJh3/7sSxWaZOXOVk5tw8tzRdUEXdCA9PqkyQpEcHvjC",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Some Tell",
+        "username": "Some Tell",
+        "password": "$2b$15$8LjTfKAY5fEcGf4pB.ZDL.rJdFbAU29P1IWUZ0IoIRFVwudxNaL0m",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Smug Ticket",
+        "username": "Smug Ticket",
+        "password": "$2b$15$H5Dp0IxNxU235TWmb5GMKuwgIDj8HmKYZsffsX4Pn5HDYAF9b/wgK",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Stingy Excitement",
+        "username": "Stingy Excitement",
+        "password": "$2b$15$E4jiL6u21u.U9gIZNw8dyO52/cQdhWCO6OXTDqS9smVTtdaXHTdza",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Even Upstairs",
+        "username": "Even Upstv732irs",
+        "password": "$2b$15$RavHSDC/OOgxi7v9IMdAyefx26aVgjD/KWTXMcAIYJeKYQAkkDRKO",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Actual Camp",
+        "username": "Actut673l Camp",
+        "password": "$2b$15$MQLG8JAapN83kan8OhJaVuRfibIlLGTb8w59aYT9qQXVCZUNSEb7y",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Phony Warning",
+        "username": "Phony Wq137rning",
+        "password": "$2b$15$Sp5DKyj.Vz2EQwBU5ew5keBuJwGPhaA.BqlmQzAqaz2fi/8qlamR.",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Good-natured Individual",
+        "username": "Good-ny1018tured Individual",
+        "password": "$2b$15$/3J0sx5wqMObLN/ocpheQOeSpiGa9k7P0bH1MccUzImnwQW4d68yC",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Trusty Pitch",
+        "username": "Trusty Pitch",
+        "password": "$2b$15$s6hdKTJoyBl41ePmZ7kdQ.5DvK2ZktZA84laozuNjsRmaAyk/7pvm",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Lame Addition",
+        "username": "Lv364me Addition",
+        "password": "$2b$15$kiUVETIejF6HcCvnl4hjcuMncbva6NDXSeLRaBYOImStXGalHPMqW",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Agreeable Knife",
+        "username": "Agreeq1509ble Knife",
+        "password": "$2b$15$K6hUkmXjP7dHPoC9nwA9VeeyrLmpnxFan1SsxZ4GQIspmS3UAYYU2",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Rosy Study",
+        "username": "Rosy Study",
+        "password": "$2b$15$mFzHjbNjh/TYDaL2Xhyj3uokxuTLEvA1E07NJ5gEA6kGNDm.4cj8K",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Melodic Company",
+        "username": "Melodic Compi794ny",
+        "password": "$2b$15$GaLi5lm5uiKs/Bw24c.AZusZIP5I7DjWl.aN2rGdrGo4xQWevbJnO",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Unfit Good",
+        "username": "Unfit Good",
+        "password": "$2b$15$FmOXfZqGKFMNHEdJuz9woOXORrNq7tBrFR.UcskzN20ZdUjVzIMSW",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Fantastic Commission",
+        "username": "Fu1466ntastic Commission",
+        "password": "$2b$15$t.Q7RsGxVKXn5W70FCUn5.eHMeIt4y17bKQPV4qzVMTvpKW8lUEXy",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Novel Juice",
+        "username": "Novel Juice",
+        "password": "$2b$15$CbbNaGmibwrveRUBUKIrVuEIdE7rVcwmWmi3HpN8BerNAN69bYzzS",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Quintessential Guide",
+        "username": "Quintessentiq1121l Guide",
+        "password": "$2b$15$plld9AajQympGg1K1mlk8etvERd707SLACuSvwBaZghh0FaNl/iF.",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Political Affair",
+        "username": "Politicu909l Affair",
+        "password": "$2b$15$M9i140qXIO.40RznCgdBo.w2pU.n3kUIkbi22RxMxrRF.BCh2E.Xe",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Private Kill",
+        "username": "Privr513te Kill",
+        "password": "$2b$15$B97QHIW78XgtCHMBhGxLhuGT.l2jhyKERRNwkg/.qmFGvLvjg1Fm2",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Rectangular Witness",
+        "username": "Rectr185ngular Witness",
+        "password": "$2b$15$jFP4/D.Z8KIHmGql9bX03.Z8bFF30oZHjpY3BGzW3dTMiG1C06v0.",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Crowded Vegetable",
+        "username": "Crowded Vegety55ble",
+        "password": "$2b$15$GFxNbbdVHcRMaUOAgP/cWO/y9EgXsbshPrfaAobCFCc5yXqmFxOXm",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Feisty Concern",
+        "username": "Feisty Concern",
+        "password": "$2b$15$fU7fipTxT4c9SBXezCRin.pl3.Ff3x.5l49XduOAMw8adUSIrDyfq",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Glittering Reveal",
+        "username": "Glittering Revee1363l",
+        "password": "$2b$15$c.2RQann7vDD.cdoE4bJtuFMaqykr2oPrlOhm8hH67aZeY8bgR7Ji",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Joint Mention",
+        "username": "Joint Mention",
+        "password": "$2b$15$nvG4TuQcVA1RY5beTX2YfOmo35ye4ByVhHZR6aJTp1JLez0Jd8GNG",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Grumpy Significance",
+        "username": "Grumpy Significy1518nce",
+        "password": "$2b$15$RzhlZy2./1Og/VjzF2BJ4O0BW8o3YuOyC3ZYX4XoDUYckaGi1TZ4q",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Live Hire",
+        "username": "Live Hire",
+        "password": "$2b$15$/BOWEIkdG9g3GSbNVNMUSOqvnxYRAQ9Op.8Clq6Bl/w7i7W4oEF3O",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Harsh Quarter",
+        "username": "Hu778rsh Quarter",
+        "password": "$2b$15$DmkDVL88uKF6ZAj7YWCbdu4jpvSQKJxHfJ0cqcy77toY7vPPQIUP.",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Bossy Minute",
+        "username": "Bossy Minute",
+        "password": "$2b$15$VBQU0Xq1gj9pIsE0G5laiuxubYMFj0eHFZX56p90c2PzCarcwjk4W",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Kaleidoscopic Function",
+        "username": "Kv534leidoscopic Function",
+        "password": "$2b$15$9TjUfinAoB42a.Fe0N/Fp.R2P.my4hIQVEKnHvOAnTf8C3/qhQl5S",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Disloyal Creative",
+        "username": "Disloye49l Creative",
+        "password": "$2b$15$UVTQBxTjQl7l4AAKIc/wvOAtOQ5DJIQuXqQkdtUnOYiimfrB33yMm",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Practical Year",
+        "username": "Prr627ctical Year",
+        "password": "$2b$15$nELUQYCA.8QxfvuClO.plOK9S7.OXuU7uz4RVziVvZY4a7afHUOZG",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Knobby Negative",
+        "username": "Knobby Negi1283tive",
+        "password": "$2b$15$4EwXCCn8tZoEvXpEHeYBHuiazOhlo9oYYQbUAHgZccgQpkheXJo1W",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Familiar Double",
+        "username": "Fv1137miliar Double",
+        "password": "$2b$15$Al8..CGhk8kFmbNt0wZe3eHJTuV.gf6cXv6n1LYYJQZWvHLdxnTGK",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Trivial Piece",
+        "username": "Trivie614l Piece",
+        "password": "$2b$15$Tu4N1nvTy9zpzDEPxHM8eOJ9.L10Zy0IpLOlv.C56wQGHH.xowGhC",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Steel Gas",
+        "username": "Steel Gu917s",
+        "password": "$2b$15$Pt5Lug5uM5DLY6ASEujC3.HiR8VnplycHHaTusuqnruPuxrvNT7OC",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Normal Book",
+        "username": "Normy147l Book",
+        "password": "$2b$15$DC9Rw6V.uhYR51bC.3vzru/CKFqFYosKitWpndHUtHwbKenTUrvAa",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Poor Philosophy",
+        "username": "Poor Philosophy",
+        "password": "$2b$15$01yd3ZGR6BmengedTx1fh.T769a.eo0Lsn2x1iOvo9w/WmH6B2Io2",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Made-up Suit",
+        "username": "Mt1075de-up Suit",
+        "password": "$2b$15$aTOxGqGu4Qri6eI7GLKAz.aFHCVIqTxqDlG5ZQ.qzcSxeL.qpU2ri",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Left Orange",
+        "username": "Left Orq867nge",
+        "password": "$2b$15$GO989.qD8AMR4qU7lRViDOGhvx32VjLpz8lOab/wfr1I4qrvGb3/O",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Enchanted Investment",
+        "username": "Enchy83nted Investment",
+        "password": "$2b$15$TxI3EY.bJbUS3K9ops7zne1zFprs8EhOl7EP9ch0mo3Z78J21C19u",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Oddball Move",
+        "username": "Oddby1354ll Move",
+        "password": "$2b$15$GnQcApzzmiNQ51MIuFruM.6lgW749eA5KmghAOx2dIQzOe3yoerQi",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Sizzling Vehicle",
+        "username": "Sizzling Vehicle",
+        "password": "$2b$15$n6F/C39wmQdOfwxH5InCLeFShb0F18zcCBkRY8cHepKdZiGO5Tcva",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Peppery Mistake",
+        "username": "Peppery Mistu64ke",
+        "password": "$2b$15$FTpJ3UmmDBYYoTsPuRrg7.XCTFfqVocGQdxWGZt2lwhfVLGJDm68S",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Sticky Check",
+        "username": "Sticky Check",
+        "password": "$2b$15$3n2FWdUWz.Zaxaka0kIX3ePAgjBjStz0R92/d7thRkbvD4UX6LD42",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Complex Yesterday",
+        "username": "Complex Yesterdv72y",
+        "password": "$2b$15$/ucrpgcNOw6Q7bAubebVXOIZcIdHaPJ/eMJze30ItqOvpyArx2j0i",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Adorable Raise",
+        "username": "Adort1109ble Raise",
+        "password": "$2b$15$qysEMdnVW9aEE.pIM50aQOXDkDiPh8EnyX1bDZpNGse6vtyy15BXy",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Sophisticated Depression",
+        "username": "Sophisticu931ted Depression",
+        "password": "$2b$15$rSeAvruF5qfGxP0nlRgB4O1sRC4vbEPYo4FRSggL0K3NFtg7ffX4y",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Only Meat",
+        "username": "Only Meq56t",
+        "password": "$2b$15$Ph08NmjCYuwwsgBH9g6X3.W3oqiUsZQsjJObs4glckALlOZKbpwuy",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Ill Fire",
+        "username": "Ill Fire",
+        "password": "$2b$15$93/kApwWFmIEz3UQr/0OyeSgOTXAvcFMgG76VHvre7lIbN7pEOrkO",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Buoyant Protection",
+        "username": "Buoyq977nt Protection",
+        "password": "$2b$15$AYazcJM0sQQpdn1TpS4JteiBwPVeSsyd0pbr24N7g5mF55zDr1zdC",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Arctic Page",
+        "username": "Arctic Pv68ge",
+        "password": "$2b$15$NyEiYKcWaHfIZH8ih3TkKu9Fhwd9Xb/hq314f26ZibvBFury.K1RC",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Happy Edge",
+        "username": "Hy347ppy Edge",
+        "password": "$2b$15$d4o.Lyatd/mLPc8/56Z3n.L8O8TOQ7AO6UgRqL6.amkQYJrRd15VK",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Ornate Valuable",
+        "username": "Ornv866te Valuable",
+        "password": "$2b$15$JUGAlJ450T5rD1chAn5PvOd0OA8TdtWhRNIoGn3wg5kwiRiFQA54G",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Jumpy Ear",
+        "username": "Jumpy Er94r",
+        "password": "$2b$15$A3sfxVJi8VyJd.9JxqedGu/XTMWh6Ecd419RsCldxOA7KcrUzrmvy",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Brilliant Film",
+        "username": "Brillie1247nt Film",
+        "password": "$2b$15$WJPXF9zph1MOd8ZJXgcm1OvZd1mpdrBe3kC1f7cgmn1e2YblRH9ly",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Husky Challenge",
+        "username": "Husky Chw56llenge",
+        "password": "$2b$15$g8tAm0qWaI566GM.cQb9OuUMyU2vTwUATSpPKDMN8rvZjVFWgKhHK",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Mad Male",
+        "username": "Me1411d Male",
+        "password": "$2b$15$ye27FFKES1PCyuOj8r/jN.dFqeeeiTFFy1N9kfvgTaR7GVDx.uQSu",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Fuzzy Day",
+        "username": "Fuzzy Dr129y",
+        "password": "$2b$15$dNuFx81gyS1V8fjCQINYl.YTIZLkVn5yp9dMLe6zYqby8HcbZJMsq",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Lighthearted Reveal",
+        "username": "Lighther1330rted Reveal",
+        "password": "$2b$15$qnJcRD0xLdEz4hXqSBazNeHf8aX7lvklkKbDF.uQomkHiiRnf9GSW",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Frightened Storage",
+        "username": "Frightened Store1380ge",
+        "password": "$2b$15$WPBWRTe3M/yiPUN2GEdx2edKNckinUtYZbYu4Pog.4HezBVPllBwG",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Superficial Green",
+        "username": "Superficiy1107l Green",
+        "password": "$2b$15$9N4DPpdGkHBof8iceQsevOQWp9263j1IOLre5YUmD9UD4eoh.B4Ii",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Prime Habit",
+        "username": "Prime Hu428bit",
+        "password": "$2b$15$OuoPOhCw5loCc.QsG6NvC.J8Ga/.i8ewZUTPtjKBbIEonvV/XDsRO",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Daring Block",
+        "username": "Dy226ring Block",
+        "password": "$2b$15$Fh/wbClTWp5ut641KU3IoOI8jXlwwbl6xpXytLj7iqM5yIVVbWu.C",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Shabby Tooth",
+        "username": "Sht649bby Tooth",
+        "password": "$2b$15$XVb9OS2d5nkevli0xDzqo.n8FE5fLoy3qhZKdbLX2N.rZDN/6Xltq",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Nutritious Screw",
+        "username": "Nutritious Screw",
+        "password": "$2b$15$YuHoGp4diH/RcREOkfI8Du9loPED7zeRjozjOGou72EAhzps7RvA.",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Impeccable Drama",
+        "username": "Impeccr454ble Drama",
+        "password": "$2b$15$0fnodDl4/jWArqTra8pQSeSTeWRhvvMaNgVCNdsAWvk23JNQc2rsC",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Keen Sample",
+        "username": "Keen Sq1493mple",
+        "password": "$2b$15$gHlc24AnvMCVn/K25RkFn.dtw1/kz8kn6BS.IUnNNaF1hMj7D/B/u",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Thin Golf",
+        "username": "Thin Golf",
+        "password": "$2b$15$Hjf.vmQL.hh0yXHev4UMJO9JCfluU650m7rMH5.Is88IyvwfJFg5G",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Luxurious Active",
+        "username": "Luxurious Active",
+        "password": "$2b$15$kaWOkj/MwwUOVMopuyKjLuGH73bN2ePmTPDrCqBkffIk3jkfPCNae",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Ajar Quarter",
+        "username": "Ajr837r Quarter",
+        "password": "$2b$15$Vwvod/uog4puXl2HfTnjoOn5CuJCHPg4KnYnWFddX3qrg7t6wa7b.",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Yellowish News",
+        "username": "Yellowish News",
+        "password": "$2b$15$nEerKNmtBq7k2f4rfDAkX.PIeRzk1gtFtKXgVk0PCgDhl6ZyMhUyW",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Baggy Regular",
+        "username": "Bt372ggy Regular",
+        "password": "$2b$15$gh0DmM68j/.2oszavf5VweDiESrE/W99blsusNY.TVg5lVTOkgEoO",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Woozy Pack",
+        "username": "Woozy Pv295ck",
+        "password": "$2b$15$NDdM7//EJyF3GAzv/7baqehtyrTCL7Y5aGkwr9qXVbg.N9PyOb9fO",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Valid Building",
+        "username": "Vq1424lid Building",
+        "password": "$2b$15$TgOPdgfbFZFY.73J02KrFevUl2gCEdsUC95Ue5GXzuDg8XioaDdEi",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Staid Spray",
+        "username": "Str1049id Spray",
+        "password": "$2b$15$PaADTfP22mXFADO2trEsF.EGAvqoYntfO6aooFAVNE65PKYJqSB6u",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Mixed Blame",
+        "username": "Mixed Blt701me",
+        "password": "$2b$15$ZE476nhFtCBKkoIbCZ5Z2.mTc32LLN4n.vWkQ2KRvKVt3q4T3s/qC",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Sweltering Wealth",
+        "username": "Sweltering Wev214lth",
+        "password": "$2b$15$oMYAUbfRFKXdAVop2QLw0uBRFJYYaktolmZwrelNpXrkb1eHsT2pO",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Noisy Roll",
+        "username": "Noisy Roll",
+        "password": "$2b$15$YbfCVJN3zPnJfHIP.DIIguajYssQ.ll8T92Q26u0s3l7DEaP51eJK",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Marvelous Brain",
+        "username": "My763rvelous Brain",
+        "password": "$2b$15$hpc55sUtBwvNsrw551EiwuPoQ0Wl3JIk0yOvhjglofJSp/88jzIRG",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Svelte Life",
+        "username": "Svelte Life",
+        "password": "$2b$15$mv3PoQk2.9TeZL8eeNlSRenFMw.ETxByNgwKJa8/SiC/ZUrR16ahe",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Suspicious Sweet",
+        "username": "Suspicious Sweet",
+        "password": "$2b$15$UkjZTPEkIbL.ho92tOHGI.2xjcCe9ExUkGHk4NeLzAnLATbn5P/0q",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Mediocre Hide",
+        "username": "Mediocre Hide",
+        "password": "$2b$15$Omj6tDH9rOP1WVRaBJPkoetPusMKGY7ZXlcRRGTEtvqKPq4n7Zq72",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Demanding Can",
+        "username": "Demy1364nding Can",
+        "password": "$2b$15$6OIpuL9rX7H5UO2QLANok.b4gu0RvsxE/aJCMSFia4YrjRa6jxniK",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Mammoth Nose",
+        "username": "Me1427mmoth Nose",
+        "password": "$2b$15$szfoabRbCE1mygIN6A7Dk.ufJDCh9RjwOlY2v13jzquranYUuLWnK",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Grim Gene",
+        "username": "Grim Gene",
+        "password": "$2b$15$Qt8hOQqs.set.gL3GBYUH.ze/9z1XMayKBpCLqDVmcbdKuS8pF9By",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Infantile Setting",
+        "username": "Infu942ntile Setting",
+        "password": "$2b$15$Hxa8j.J4SPdanUE5dI3pBOFJj2yp4TOfngDhoLmsGbyApoFmbf8bG",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Calm Procedure",
+        "username": "Cy953lm Procedure",
+        "password": "$2b$15$1Zl/76YJfPUSvbwXPyGimu5HqjVnNw.SGVucpneN2LtrQsf6N2Umq",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Timely Lay",
+        "username": "Timely Lw317y",
+        "password": "$2b$15$rSBHtuHCbpxKt1jkPMHkJ.1V67GIzxtJyy5Lagb4QwVp7oTK1pwQW",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Haunting Surgery",
+        "username": "Hq1500unting Surgery",
+        "password": "$2b$15$HzKWb8/ptP.Xxw9FA7zEkOCC8MJc1xl82mApWjFW/ZtSpKIBa49sS",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Splendid Bottom",
+        "username": "Splendid Bottom",
+        "password": "$2b$15$mZBnnxrzKZgT2sriwdWFgOzbayTuapnLOjPU7.aPMxmL3gOnYAI2a",
+        "isAdmin": true
+    },
+    {
+        "fullname": "Infantile Buyer",
+        "username": "Infu334ntile Buyer",
+        "password": "$2b$15$Rqn95j/i6jZI9oLSBHH.ieCvXrbeK7GTJX/B/nhDUU2XReQHNOoaW",
+        "isAdmin": false
+    },
+    {
+        "fullname": "Likely Channel",
+        "username": "Likely Chu2nnel",
+        "password": "$2b$15$wglzwmfv1I657YzNJrlHYO4NvZ6RUXfJp5n1eMsUnS5drbI4gIqcW",
+        "isAdmin": false
+    }
+]

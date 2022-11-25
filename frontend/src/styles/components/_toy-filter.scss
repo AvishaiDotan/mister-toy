@@ -90,7 +90,17 @@
     }
     
     .el-radio-group {
-        width: 500px;
+        min-width: 130px;
+        max-width: 200px;
+        flex-grow: 1;
+    }
+
+    .el-radio-button {
+        width: 50%;
+    }
+
+    .el-input__wrapper {
+        justify-content: flex-start;
     }
     
     .el-radio-button:last-child .el-radio-button__inner,

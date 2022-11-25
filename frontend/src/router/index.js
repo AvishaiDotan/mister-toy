@@ -5,6 +5,7 @@ import toyAPP from '../views/toy-app.vue'
 import toyEdit from '../views/toy-edit.vue'
 import toyDetails from '../views/toy-details.vue'
 import dashboard from '../views/dashboard.vue'
+import userLogin from '../views/user-login.vue'
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -29,6 +30,10 @@ const router = createRouter({
     {
       path: '/dashboard',
       component: dashboard
+    },
+    {
+      path: '/user',
+      component: userLogin
     },
   ],
 })

@@ -16,7 +16,7 @@
     export default {
       name: 'toys-app',
       created() {
-          this.$store.dispatch({ type: 'loadToys'})
+          this.$store.dispatch({ type: 'loadToys', filterBy: {}})
 
           eventBus.on('delete-toy', (toyId) => {
             this.$store.dispatch({ type: 'deleteToy', id: toyId })

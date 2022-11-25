@@ -1,5 +1,5 @@
 <template>
-  <section class="toy-list">
+  <section class="toy-list" v-if="toys">
     <ul class="toy-preview-container">
       <toy-preview v-for="toy in toys" :key="toy._id" :toy="toy" />
     </ul>
@@ -16,6 +16,6 @@ export default {
   },
   components: {
     toyPreview
-  }
+  },
 }
 </script>

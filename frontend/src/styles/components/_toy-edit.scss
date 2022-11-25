@@ -1,4 +1,9 @@
+main.toy-edit-container {
+    display: block;
+}
+
 .toy-edit {
+    margin-block-start: 50px;
     grid-area: toy-list;
 
     h2 {
@@ -19,6 +24,18 @@
         box-shadow: 0.1px 0.1px 3px #565454;
         padding: 20px;
         position: relative;
+
+        @include for-narrow-layout {
+            width: 80%;
+        }
+    
+        @include for-normal-layout {
+            width: 50%;
+        }
+    
+        @include for-wide-layout {
+            width: 50%;
+        }
 
         p {
             font-family: ProductSans-medium;

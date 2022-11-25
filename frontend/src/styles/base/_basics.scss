@@ -14,5 +14,9 @@ button:hover {
 main {
     background-color: lighten($clr-secondary, 30%);
     min-height: 100vh;
+
+    &.graphs {
+
+    }
 }
 
